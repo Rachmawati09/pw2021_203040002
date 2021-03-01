@@ -1,16 +1,15 @@
 <?php
 function salam($waktu = "Datang", $nama = "Admin") {
-    return "Selamat  $waktu, $nama!";
+    return "Selamat $waktu, $nama!";
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Latihan Function</title>
+    <title>Latihan Function </title>
 </head>
 <body>
-<h1><?= salam("Pagi", "Chyntia Citra"); ?></h1>
-    
+    <h1><?= salam ("Pagi", "Chyntia Citra"); ?></h1>
 </body>
 </html>
