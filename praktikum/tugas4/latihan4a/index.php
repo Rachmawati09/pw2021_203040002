@@ -17,7 +17,7 @@ $result = mysqli_query($conn, "SELECT * FROM Skincare");
 </head>
 <body>
     <div class="container">
-        <table cellpadding="10" cellspacing="0" border="1">
+        <table border = "1" cellpadding="10" cellspacing="0" border="1">
             <tr>
                 <th>No</th>
                 <th>Gambar</th>
@@ -25,7 +25,7 @@ $result = mysqli_query($conn, "SELECT * FROM Skincare");
                 <th>Kegunaan</th>
                 <th>Harga</th>
             </tr>
-            <?php $i = 1 ?>
+            <?php $i = 1; ?>
             <?php while($row = mysqli_fetch_assoc($result)) : ?>
                 <tr>
                     <td><?= $i ?></td>

@@ -1,5 +1,4 @@
 <?php
-// fungsi untuk melakukan koneksi ke database
 function koneksi()
 {
     $conn = mysqli_connect("localhost", "root", "");

@@ -13,28 +13,27 @@ $Skincare = query("SELECT * FROM Skincare")
     <title>latihan 4b</title>
 </head>
 <body>
-    <div class="container">
-        <table cellpadding="10" cellspacing="0" border="1">
+<h1>Skincare</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Gambar</th>
+            <th>Nama Produk</th>
+            <th>Kegunaan</th>
+            <th>Harga</th>
+        </tr>
+        <?php $i = 1; ?>
+		<?php foreach ($Skincare as $skin) : ?>
             <tr>
-                <th>No</th>
-                <th>Gambar</th>
-                <th>Nama Produk</th>
-                <th>Kegunaan</th>
-                <th>Harga</th>
+                <td><?=$i; ?></td>
+                <td><img src="assets/img/<?=$skin["Gambar"]; ?>"></td>
+                <td><?=$skin["Nama Produk"]; ?></td>
+                <td><?=$skin["Kegunaan"]; ?></td>
+                <td><?=$skin["Harga"]; ?></td>
             </tr>
-            <?php $i = 1 ?>
-            <?php foreach ($Skincare as $skin) : ?>
-                <tr>
-                    <td><?= $i ?></td>
-                    <td><img src="../latihan4b/assets/img/<?= $skin["Gambar"]; ?>"></td>
-                    <td><?= $skin["Nama Produk"] ?></td>
-                    <td><?= $skin["Kegunaan"]?></td>
-                    <td><?= $skin["Harga"]?></td>
-                </tr>
-                <?php $i++ ?>
-            <?php endforeach; ?>
-        </table>
-    </div>
-    
+        <?php $i++;?>
+        <?php endforeach; ?>
+
+    </table>
 </body>
 </html>
