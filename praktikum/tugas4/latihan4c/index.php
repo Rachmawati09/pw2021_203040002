@@ -1,6 +1,6 @@
 <?php
     require 'php/functions.php';
-    $Skincare = query("SELECT * FROM skincare")
+    $skincare = query("SELECT * FROM skincare")
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<?php foreach ($Skincare as $skin) : ?>
+		<?php foreach ($skincare as $skin) : ?>
                 <p class="nama">
-                    <a href="php/detail.php?id=<?= $skin['No'] ?>">
+                    <a href="php/detail.php?id=<?= $skin['id'] ?>">
                         <?= $skin["Nama Produk"] ?>
                     </a>
                 </p>

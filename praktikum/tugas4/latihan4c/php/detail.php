@@ -5,8 +5,8 @@
     }
 
     require 'functions.php';
-    $No = $_GET ['id'];
-    $Skincare = query("SELECT * FROM skincare WHERE id = $No")[0];
+    $id = $_GET ['id'];
+    $skincare = query("SELECT * FROM skincare WHERE id = $id")[0];
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +20,13 @@
 <body bgcolor="grey">
     <div class="container">
         <div class="gambar">
-            <img src="../assets/img/<?= $Skincare["Gambar"]; ?>" ; alt="">
+            <img src="../assets/img/<?= $skincare["Gambar"]; ?>" ; alt="">
         </div>
     <div class="keterangan">
-        <p><?= $Skincarre["Nama Produk"]; ?></p>
+        <p><?= $skincare["Nama Produk"]; ?></p>
         <p><?= $skincare["Gambar"]; ?></p>
-        <p><?= $Skincare["Kegunaan"]; ?></p>
-        <p><?= $Skincare["Harga"]; ?></p>
+        <p><?= $skincare["Kegunaan"]; ?></p>
+        <p><?= $skincare["Harga"]; ?></p>
     </div>
 
         <button class="tombol-kembali"><a href="../index.php">Kembali</a></button>
