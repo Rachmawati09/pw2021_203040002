@@ -1,74 +1,43 @@
-<<<<<<< HEAD
 <?php
-    if (!isset($_GET['id'])) {
-        header("location: ../index.php");
-        exit;
-    }
-
-    require 'functions.php';
-    $id = $_GET ['id'];
-    $skincare = query("SELECT * FROM skincare WHERE id = $id")[0];
+if (!isset($_GET['id'])) {
+  header("location: ../index.php");
+  exit;
+}
+require('functions.php');
+$id = $_GET["id"];
+$Skincare = query("SELECT * FROM skincare WHERE id = $id")[0];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Skincare</title>
+  <link rel="stylesheet" type="text/css" href="assets/Semantic-UI-CSS-master/Semantic-UI-CSS-master/semantic.min.css">
+  <script type="text/javascript" src="semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+
+
 </head>
-<body bgcolor="grey">
-    <div class="container">
-        <div class="gambar">
-            <img src="../assets/img/<?= $skincare["Gambar"]; ?>" ; alt="">
+
+<body>
+  <h2 class="ui segment">Skincare <?= $Skincare["nama_produk"] ?></h2>
+  <div class="ui container">
+    <div class="ui card">
+      <div class="content">
+        <div class="content">
+          <a class="header"><?= $Skincare["Kegunaan"] ?></a>
+          <div class="meta">
+            <span class="date"><?= $Skincare["Harga"] ?></span>
+          </div>
+          <div class="image">
+            <img src="../assets/img/<?= $Skincare["Gambar"] ?>">
+          </div>
         </div>
-    <div class="keterangan">
-        <p><?= $skincare["Nama Produk"]; ?></p>
-        <p><?= $skincare["Gambar"]; ?></p>
-        <p><?= $skincare["Kegunaan"]; ?></p>
-        <p><?= $skincare["Harga"]; ?></p>
+      </div>
+      <a href="../index.php"><button class="ui inverted olive button">Back Again</button></a>
     </div>
-
-        <button class="tombol-kembali"><a href="../index.php">Kembali</a></button>
-    </div>
-    
 </body>
-=======
-<?php
-    if (!isset($_GET['id'])) {
-        header("location: ../index.php");
-        exit;
-    }
 
-    require 'functions.php';
-    $id = $_GET ['id'];
-    $skincare = query("SELECT * FROM skincare WHERE id = $id")[0];
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body bgcolor="grey">
-    <div class="container">
-        <div class="gambar">
-            <img src="../assets/img/<?= $skincare["Gambar"]; ?>" ; alt="">
-        </div>
-    <div class="keterangan">
-        <p><?= $skincare["Nama Produk"]; ?></p>
-        <p><?= $skincare["Gambar"]; ?></p>
-        <p><?= $skincare["Kegunaan"]; ?></p>
-        <p><?= $skincare["Harga"]; ?></p>
-    </div>
-
-        <button class="tombol-kembali"><a href="../index.php">Kembali</a></button>
-    </div>
-    
-</body>
->>>>>>> 6f697ebe167ecb9a2486143ce435bf7bb78963fe
 </html>

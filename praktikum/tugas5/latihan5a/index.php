@@ -30,21 +30,21 @@ $Skincare = query("SELECT * FROM skincare");
             </tr>
         </thead>
         <tbody>
-            <?php $i = 1;?>
-            <?php foreach ($Skincare as $skin): ?>
-            <tr>
-                <td><?=$i;?></td>
-                <td><img width="220px" src="assets/<?=$skin['Gambar'];?>" alt=""></td>
-                <td>
-                    <a href="php/detail.php?id=<?=$skin['id'];?>">
-                        <?=$skin["nama_produk"];?>
-                    </a>
-                </td>
-                <td><?=$skin['Kegunaan'];?></td>
-                <td><?=$skin['Harga'];?></td>
-            </tr>
-            <?php $i++;?>
-            <?php endforeach;?>
+            <?php $i = 1; ?>
+            <?php foreach ($Skincare as $skin) : ?>
+                <tr>
+                    <td><?= $i; ?></td>
+                    <td><img width="220px" src="assets/<?= $skin['Gambar']; ?>" alt=""></td>
+                    <td>
+                        <a href="php/detail.php?id=<?= $skin['id']; ?>">
+                            <?= $skin["nama_produk"]; ?>
+                        </a>
+                    </td>
+                    <td><?= $skin['Kegunaan']; ?></td>
+                    <td><?= $skin['Harga']; ?></td>
+                </tr>
+                <?php $i++; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
     <script type="text/javascript" src="js/materialize.min.js"></script>

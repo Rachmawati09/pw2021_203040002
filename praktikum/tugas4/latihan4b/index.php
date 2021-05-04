@@ -1,80 +1,42 @@
-<<<<<<< HEAD
 <?php
-// menghubungkan dengan file php lainnya
-require 'php/functions.php';
-
-// melakukan query
-$Skincare = query("SELECT * FROM Skincare")
+$conn = mysqli_connect("localhost", "root", "");
+mysqli_select_db($conn, "pw_tubes_203040002");
+$result = mysqli_query($conn, "SELECT * FROM skincare");
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang>
+
 <head>
-    <meta charset="UTF-8">
-    <title>latihan 4b</title>
+  <title>Skincare</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+
 <body>
-<h1>Skincare</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
+  <div class="container mb-3 mt-3">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
         <tr>
-            <th>No</th>
-            <th>Gambar</th>
-            <th>Nama Produk</th>
-            <th>Kegunaan</th>
-            <th>Harga</th>
+          <th scope="col">NO.</th>
+          <th scope="col">Gambar</th>
+          <th scope="col">Nama Produk</th>
+          <th scope="col">Kegunaan</th>
+          <th scope="col">Harga</th>
         </tr>
-        <?php $i = 1; ?>
-		<?php foreach ($Skincare as $skin) : ?>
-            <tr>
-                <td><?=$i; ?></td>
-                <td><img src="assets/img/<?=$skin["Gambar"]; ?>"></td>
-                <td><?=$skin["Nama Produk"]; ?></td>
-                <td><?=$skin["Kegunaan"]; ?></td>
-                <td><?=$skin["Harga"]; ?></td>
-            </tr>
-        <?php $i++;?>
-        <?php endforeach; ?>
-
-    </table>
-</body>
-=======
-<?php
-// menghubungkan dengan file php lainnya
-require 'php/functions.php';
-
-// melakukan query
-$Skincare = query("SELECT * FROM Skincare")
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>latihan 4b</title>
-</head>
-<body>
-<h1>Skincare</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
+      </thead>
+      <?php $i = 1; ?>
+      <?php while ($row = mysqli_fetch_assoc($result)) : ?>
         <tr>
-            <th>No</th>
-            <th>Gambar</th>
-            <th>Nama Produk</th>
-            <th>Kegunaan</th>
-            <th>Harga</th>
+          <td><b><?= $i ?> </b></td>
+          <td><img src="assets/img/<?= $row["Gambar"]; ?>"></td>
+          <td><b><?= $row["nama_produk"]; ?></b></td>
+          <td><b><?= $row["Kegunaan"]; ?></b></td>
+          <td><b><?= $row["Harga"]; ?></b></td>
         </tr>
-        <?php $i = 1; ?>
-		<?php foreach ($Skincare as $skin) : ?>
-            <tr>
-                <td><?=$i; ?></td>
-                <td><img src="assets/img/<?=$skin["Gambar"]; ?>"></td>
-                <td><?=$skin["Nama Produk"]; ?></td>
-                <td><?=$skin["Kegunaan"]; ?></td>
-                <td><?=$skin["Harga"]; ?></td>
-            </tr>
-        <?php $i++;?>
-        <?php endforeach; ?>
-
+        <?php $i++; ?>
+      <?php endwhile; ?>
+      </tr>
     </table>
+  </div>
 </body>
->>>>>>> 6f697ebe167ecb9a2486143ce435bf7bb78963fe
+
 </html>

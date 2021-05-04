@@ -1,88 +1,65 @@
-<<<<<<< HEAD
 <?php
-// Melakukan koneksis ke database
-$conn = mysqli_connect("localhost", "root", "");
+// $Skincare = query("SELECT * FROM skincare");
 
-// Memilih database
-mysqli_select_db($conn, "pw_tubes_203040002");
+$koneksi = mysqli_connect("localhost", "root", "");
+mysqli_select_db($koneksi, "pw_tubes_203040002");
+$Skincare = mysqli_query($koneksi, "SELECT * FROM skincare");
 
-// Melakukan Query dari database
-$result = mysqli_query($conn, "SELECT * FROM Skincare");
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang>
+
 <head>
-    <meta charset="UTF-8">
-    <title>latihan 4a</title>
+  <title>Skincare</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+
+
 <body>
-    <div class="container">
-        <table border = "1" cellpadding="10" cellspacing="0" border="1">
-            <tr>
-                <th>No</th>
-                <th>Gambar</th>
-                <th>Nama Produk</th>
-                <th>Kegunaan</th>
-                <th>Harga</th>
-            </tr>
-            <?php $i = 1; ?>
-            <?php while($row = mysqli_fetch_assoc($result)) : ?>
-                <tr>
-                    <td><?= $i ?></td>
-                    <td><img src="../latihan4a/assets/img/<?= $row["Gambar"]; ?>"></td>
-                    <td><?= $row["Nama Produk"] ?></td>
-                    <td><?= $row["Kegunaan"] ?></td>
-                    <td><?= $row["Harga"] ?></td>
-                </tr>
-                <?php $i++; ?>
-            <?php endwhile; ?>
-        </table>
+  <div class="ui sigment small stackable menu" id="small-menu" style="padding: 0 !important; margin: 0 !important;">
+    <div class="ui container">
+      <div class="left menu">
+        <div class="item"><i class="microchip icon icon huge"></i>
+          <div class="item">
+            <div class="ui action input">
+              <input type="text" placeholder="Search....">
+              <select class="ui compact selection dropdown">
+                <option value="article">Gambar</option>
+                <option value="Product">Nama Produk</option>
+                <option value="all">Kegunaan</option>
+                <option value="all">Harga</option>
+
+              </select>
+              <button class="ui button olive">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    
-</body>
-=======
-<?php
-// Melakukan koneksis ke database
-$conn = mysqli_connect("localhost", "root", "");
+  </div>
+  <div class="table">
+    <div class="ui container ">
+      <table class="ui selectable celled table ui inverted olive table">
+        <tr>
+          <th>NO.</th>
+          <th>Gambar</th>
+          <th>Nama Produk</th>
+          <th>Kegunaan</th>
+          <th>Harga</th>
 
-// Memilih database
-mysqli_select_db($conn, "pw_tubes_203040002");
-
-// Melakukan Query dari database
-$result = mysqli_query($conn, "SELECT * FROM Skincare");
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>latihan 4a</title>
-</head>
-<body>
-    <div class="container">
-        <table border = "1" cellpadding="10" cellspacing="0" border="1">
-            <tr>
-                <th>No</th>
-                <th>Gambar</th>
-                <th>Nama Produk</th>
-                <th>Kegunaan</th>
-                <th>Harga</th>
-            </tr>
-            <?php $i = 1; ?>
-            <?php while($row = mysqli_fetch_assoc($result)) : ?>
-                <tr>
-                    <td><?= $i ?></td>
-                    <td><img src="../latihan4a/assets/img/<?= $row["Gambar"]; ?>"></td>
-                    <td><?= $row["Nama Produk"] ?></td>
-                    <td><?= $row["Kegunaan"] ?></td>
-                    <td><?= $row["Harga"] ?></td>
-                </tr>
-                <?php $i++; ?>
-            <?php endwhile; ?>
-        </table>
-    </div>
-    
-</body>
->>>>>>> 6f697ebe167ecb9a2486143ce435bf7bb78963fe
-</html>
+        </tr>
+        </thead>
+        </tbody>
+        <?php $i = 1;
+        while ($row = mysqli_fetch_assoc($Skincare)) :
+        ?>
+          <tr>
+            <td><b><?= $i ?> </b></td>
+            <td><img src="assets/img/<?= $row["Gambar"]; ?>"></td>
+            <td><b><?= $row["nama_produk"]; ?></b></td>
+            <td><b><?= $row["Kegunaan"]; ?></b></td>
+            <td><b><?= $row["Harga"]; ?></b></td>
+          </tr>
+          <?php $i++; ?>
+        <?php endwhile; ?>
