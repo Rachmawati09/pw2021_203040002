@@ -34,7 +34,7 @@ $Skincare = query("SELECT * FROM skincare");
             <?php foreach ($Skincare as $skin) : ?>
                 <tr>
                     <td><?= $i; ?></td>
-                    <td><img width="220px" src="assets/img/<?= $skin['Gambar']; ?>" alt=""></td>
+                    <td><img width="220px" src="assets/<?= $skin['Gambar']; ?>" alt=""></td>
                     <td>
                         <a href="php/detail.php?id=<?= $skin['id']; ?>">
                             <?= $skin["nama_produk"]; ?>
