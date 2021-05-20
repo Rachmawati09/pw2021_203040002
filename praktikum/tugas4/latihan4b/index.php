@@ -27,7 +27,7 @@ $result = mysqli_query($conn, "SELECT * FROM skincare");
       <?php while ($row = mysqli_fetch_assoc($result)) : ?>
         <tr>
           <td><b><?= $i ?> </b></td>
-          <td><img src="assets/img/<?= $row["Gambar"]; ?>"></td>
+          <td><img width="220px" src="assets/img/<?= $row["Gambar"]; ?>"></td>
           <td><b><?= $row["nama_produk"]; ?></b></td>
           <td><b><?= $row["Kegunaan"]; ?></b></td>
           <td><b><?= $row["Harga"]; ?></b></td>

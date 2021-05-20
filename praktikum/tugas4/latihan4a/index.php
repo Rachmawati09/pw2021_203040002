@@ -56,7 +56,7 @@ $Skincare = mysqli_query($koneksi, "SELECT * FROM skincare");
         ?>
           <tr>
             <td><b><?= $i ?> </b></td>
-            <td><img src="assets/img/<?= $row["Gambar"]; ?>"></td>
+            <td><img width="220px" src="assets/img/<?= $row["Gambar"]; ?>"></td>
             <td><b><?= $row["nama_produk"]; ?></b></td>
             <td><b><?= $row["Kegunaan"]; ?></b></td>
             <td><b><?= $row["Harga"]; ?></b></td>
