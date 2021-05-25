@@ -1,0 +1,65 @@
+body {
+  font-family: 'Handlee', cursive;
+  background-color: antiquewhite;
+}
+
+.slider h5,
+.slider h2 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding-bottom: 30px;
+}
+
+.navbar-fixed {
+  position: absolute;
+  z-index: 999999999;
+}
+
+form {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.search {
+  padding: 8px 15px;
+  background: rgba(50, 50, 50, 0.2);
+  border: 0px solid #dbdbdb;
+}
+
+.button {
+  position: relative;
+  padding: 6px 15px;
+  left: -8px;
+  border-radius: 9px;
+  border: 2px solid #53bd84;
+  background-color: #53bd84;
+  color: #fafafa;
+}
+
+.button:hover {
+  background-color: #fafafa;
+  color: #207cca;
+}
+
+.tombol-kembali {
+  color: white;
+  padding: 7px 14px;
+  font-weight: 600;
+  transition: all .3s ease;
+  margin-top: 25px;
+  border: none;
+}
+
+.tombol-kembali a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.tombol-kembali:hover {
+  transform: scale(0.9);
+}
+
+
+section,
+footer {
+  padding: 2px 0;
+}
