@@ -25,29 +25,30 @@ if (isset($_POST['cari'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <title>Skincare Shop</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/shop.png" />
 </head>
 
 <body id="home" class="scrollspy">
 
   <!-- Navbar -->
-  <div class="navbar-fixed">
+  <div class="navbar-fixed scrollspy">
     <nav class="black">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo" class="darken brown-text text-darken-3" style="margin-right: 15px;">Skincare Shop</a>
         <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a href="php/login.php" class="waves-effect waves-light btn" style="border-radius: 15px;">Login</a>
+            <a href="php/login.php" style="font-family: Arial, Helvetica, sans-serif;">Login</a>
           </li>
           <li>
-            <a href="php/registrasi.php" class="waves-effect waves-light btn" style="border-radius: 15px;">Sign up</a>
+            <a href="php/registrasi.php" style="font-family:Arial, Helvetica, sans-serif;">Sign up</a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
-  </div>
-  </div>
+
 
   <!-- Sidenav -->
 
@@ -72,21 +73,21 @@ if (isset($_POST['cari'])) {
   <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
   <!-- Slider -->
-  <div class="slider">
+  <div id="slider" class="slider scrollspy">
     <ul class="slides">
       <li>
-        <img src="../tubes/assets/img/sok.jpg">
-        <div class="caption center-align">
-          <h3 class="brown-text text-darken-1 waves-effect waves-light">Selamat Datang di Skincare Shop Kami!!</h3>
-          <h4 class="light pink-text text-lighten-1">Beauty & Skincare</h4>
-          <h6 class="brown-text waves-effect waves-light ">"It’s never too late to look after yourself. Never too late to eat healthily, get plenty of rest, exercise regularly and look after your skin. You’d be amazed at how quickly your skin and body can rejuvenate given the right environment."</h6>
+        <img src="assets/img/sok.jpg">
+        <div class="caption left-align">
+          <h2 class="light brown-text text-darken-3" style="font-family:Arial, Helvetica, sans-serif;">Skincare <br> & Beauty</h2>
+          <h5 class="light brown-text text-darken-3">It’s never too late to look after yourself. Never too late to eat healthily,<br>get plenty of rest, exercise regularly and look after your skin.</h5>
+          <a class="waves-effect btn" style="background-color: black;">LEARN MORE</a>
         </div>
       </li>
     </ul>
   </div>
 
   <!-- seacrh -->
-  <h4 style="text-align: center;">Search Produk Disini</h4>
+  <h4 class="center"><span class="black-text">Search Produk</span></h4>
   <form action="" method="POST">
     <input type="text" name="keyword" size="35" placeholder="masukan keyword pencarian.." autocomplete="off" autofocus class="keyword">
     <button type="submit" name="cari" class="tombol-cari">Cari!</button>
@@ -106,7 +107,7 @@ if (isset($_POST['cari'])) {
             <?php if (empty($Skincare)) : ?>
               <tr>
                 <td colspan="8">
-                  <h1>Skincare Tidak Ditemukan</h1>
+                  <h3>Produk Tidak Ditemukan</h3>
                 </td>
               </tr>
             <?php else : ?>
@@ -115,13 +116,13 @@ if (isset($_POST['cari'])) {
                   <div class="col s12 m4">
                     <div class="card small">
                       <div class="card-image">
-                        <img width="220px" src="../tubes/assets/img/<?= $sk['Gambar']; ?>" class="responsive-img materialboxed">
+                        <img width="220px" src="assets/img/<?= $sk['Gambar']; ?>" class="responsive-img materialboxed">
                       </div>
                       <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4"><?= $sk['nama_produk']; ?></span>
+                        <span class="card-title activator grey-text text-darken-4" style="font-size: 20px;"><?= $sk['nama_produk']; ?></span>
                       </div>
                       <div class="card-action">
-                        <a href="php/detail.php?id=<?= $sk['id']; ?>">More Detail</a>
+                        <a class="waves-effect btn-small" style="background-color: black;" href="php/detail.php?id=<?= $sk['id']; ?>">More Detail</a>
                       </div>
                     </div>
                   </div>
@@ -145,7 +146,7 @@ if (isset($_POST['cari'])) {
           <p class="grey-text text-lighten-4">Perawatan kulit adalah rangkaian dari berbagai penerapan yang mendukung keadaan integritas kulit, untuk meningkatkan sebuah penampilan dan mengubah kondisi kulit. Mereka dapat mengandung nutrisi, menghindari dari paparan sinar matahari yang berlebihan dan penggunaan produk kulit emolien yang tepat.</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Follow My Social Media</h5>
+          <h5 class="white-text">Follow Social Media</h5>
           <div class="icon-sosmed">
             <a href="https://twitter.com/aprrach" class="white-text" style="margin-right: 10px;">
               <i class="fab fa-twitter fa-4x"></i>
@@ -170,7 +171,6 @@ if (isset($_POST['cari'])) {
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
-
   <script src="js/script.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
 const tombolCari = document.querySelector('.tombol-cari');
 const keyword = document.querySelector('.keyword');
-const container = document.querySelector('.container')
+const produk = document.querySelector('.produk')
 
 // hilangkan tombol cari
 tombolCari.style.display = 'none';

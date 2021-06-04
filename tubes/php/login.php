@@ -60,10 +60,11 @@ if (isset($_POST['submit'])) {
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/mantap.css">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-    <title>Skincare</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/shop.png" />
+    <title>Login</title>
     <style>
         body {
-            font-family: 'Handlee', cursive;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(37, 48, 48);
             color: azure;
         }
@@ -75,7 +76,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <h3>Skincare</h3>
+    <h3>Sign In</h3>
     <script type="text/javascript" src="../js/materialize.min.js"></script>
     <div class="container">
         <form action="" method="post">

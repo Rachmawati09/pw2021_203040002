@@ -21,19 +21,21 @@ if (isset($_POST["register"])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>registrasi</title>
+  <title>Sign Up</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/mantap.css">
   <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../assets/img/shop.png" />
   <style>
     body {
-      font-family: 'Handlee', cursive;
+      font-family: Arial, Helvetica, sans-serif;
       background-color: rgb(37, 48, 48);
       color: azure;
     }
 
-    h3 {
+    h3,
+    h4 {
       text-align: center;
     }
   </style>
@@ -41,14 +43,14 @@ if (isset($_POST["register"])) {
 
 <body>
 
-  <h3>Skincare</h3>
+  <h3>Sign Up</h3>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
   <div class="container">
     <form action="" method="POST" style="margin-left: 25px;">
       <div class="card-panel ">
         <table style="margin-right: 50px;">
           <tr>
-            <h4 style="color: black;">Buatlah Username dan Passsword</h4>
+            <h4 style="color: black;">Create Account</h4>
           </tr>
           <tr>
             <td><label for="username"><span class="badge bg-success">Username</span></label></td>

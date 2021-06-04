@@ -14,9 +14,10 @@ $Skincare = query("SELECT * FROM skincare WHERE id = $id")[0];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+    <title>Detail Produk</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/img/shop.png" />
     <style type="text/css">
         body {
             font-family: 'Handlee', cursive;

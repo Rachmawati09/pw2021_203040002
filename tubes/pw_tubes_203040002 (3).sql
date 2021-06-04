@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Bulan Mei 2021 pada 17.47
+-- Waktu pembuatan: 01 Jun 2021 pada 18.17
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.1
 
@@ -69,8 +69,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin'),
-(2, 'chyntia', '$2y$10$Y2KCRqgpszABouStjEt3i.yD82Gx5/jKLSM5jpcyOONnVXQqAOXbm'),
-(3, '', '$2y$10$hwr8y36.B3F6yTQ3hdrSMu5DZ12nwN1XHzb0gt2.Jf2Q8L75jOl.6');
+(2, 'chyntia', '$2y$10$Y2KCRqgpszABouStjEt3i.yD82Gx5/jKLSM5jpcyOONnVXQqAOXbm');
 
 --
 -- Indexes for dumped tables
